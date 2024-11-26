@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Sticker } from '../model/Sticker';
 
 @Component({
   selector: 'app-root',

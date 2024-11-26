@@ -9,7 +9,7 @@
         <div class="sticker_container" *ngFor="let sticker of stickers">
             <div class="individual_sticker" id = {{sticker.id}}>
                 <h2>{{sticker.title}}</h2>
-                <img src="trashbin.png" (click)="deleteSticker(sticker.id)">
+                <img src="trashbin.png" (click)="deleteSticker(sticker.id)" alt="sticker_place">
                 <p>{{sticker.content}}</p>
             </div>
         </div>
