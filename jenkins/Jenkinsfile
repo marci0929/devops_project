@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    tools {nodejs "NODEJS_23"}
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Deliver') {
+            steps {
+                sh 'chmod -R +rwx ./deliver.sh'
+                sh 'chmod -R +rwx ./kill.sh'
+                sh './deliver.sh'
+                input message: 'Click "Proceed" to shutdown website'
+                sh './kill.sh'
+            }
+        }
+    }
+}
