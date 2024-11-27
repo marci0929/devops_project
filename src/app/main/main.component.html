@@ -1,0 +1,10 @@
+<div class="main-container">
+    <button class="add-button" (click)="navigateToAddSticker()">Add Sticker</button>
+    <div class="sticker-grid">
+      <div class="sticker-card" *ngFor="let sticker of stickers; let i = index">
+        <h3>{{ sticker.title }}</h3>
+        <p>{{ sticker.content }}</p>
+        <button class="delete-button" (click)="deleteSticker(i)">X</button>
+      </div>
+    </div>
+  </div>

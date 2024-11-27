@@ -1,0 +1,12 @@
+<div class="add-sticker-container">
+    <h2>Add a New Sticker</h2>
+    <form (ngSubmit)="saveSticker()">
+      <label for="title">Title</label>
+      <input id="title" type="text" [(ngModel)]="title" name="title" required />
+
+      <label for="text">Text</label>
+      <textarea id="text" [(ngModel)]="text" name="text" required></textarea>
+
+      <button type="submit">Save New Sticker</button>
+    </form>
+  </div>
