@@ -1,20 +1,97 @@
 pipeline {
     agent any
-    tools {nodejs "NODEJS_23"}
+
+    tools {
+        nodejs 'NODEJS_23'
+    }
+
+    environment {
+        GITHUB_REPO = 'https://github.com/marci0929/devops_project.git'
+        BRANCH = 'master'
+        DEPLOY_CONTAINER = 'stickers-app'
+    }
+
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                sh 'npm install'
+                git branch: env.BRANCH, url: env.GITHUB_REPO
             }
         }
-        stage('Deliver') {
+
+        stage('Install Dependencies') {
             steps {
-                sh 'chmod -R +rwx ./deliver.sh'
-                sh 'chmod -R +rwx ./kill.sh'
-                sh './deliver.sh'
-                input message: 'Click "Proceed" to shutdown website'
-                sh './kill.sh'
+                sh 'npm ci'
             }
+        }
+
+        stage('Lint') {
+            steps {
+                sh 'npm run lint'
+            }
+        }
+
+        stage('Test Source') {
+            steps {
+                sh 'npm run test:src'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Test Distribution') {
+            steps {
+                sh 'npm run test:dist'
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'dist/**/*', fingerprint: true
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                anyOf {
+                    branch env.BRANCH
+                }
+            }
+            steps {
+                echo 'Deploying the application...'
+                sshagent(credentials: ['jenkins-deploy-key']) { // sshagent plugin szükséges
+                    sh """
+                        ssh -o StrictHostKeyChecking=no deploy@${env.DEPLOY_CONTAINER} -p 22 '
+                            cd /app
+                            rm -rf *
+                            git clone ${env.GITHUB_REPO}
+                            cd /app/devops_project
+                            git checkout ${env.BRANCH}
+                            npm ci
+                            npm run build
+                            ng serve
+                        '
+                    """
+                }
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                deleteDir()
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline sikeresen lefutott!'
+        }
+        failure {
+            echo 'A pipeline végrehajtása sikertelen volt.'
         }
     }
 }
