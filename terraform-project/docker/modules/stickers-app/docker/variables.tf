@@ -18,19 +18,19 @@ variable "image_tag" {
 variable "container_count" {
   description = "Indítandó konténerek száma"
   type        = number
-  default     = 4
+  default     = 2
 }
 
 variable "memory_limit" {
   description = "Memória limit MB-ban"
   type        = number
-  default     = 256  # 256 MB
+  default     = 1024  # 256 MB
 }
 
 variable "restart_policy" {
   description = "Újraindítási szabály"
   type        = string
-  default     = "unless-stopped"  # always, on-failure, unless-stopped
+  default     = "on-failure"
 }
 
 variable "healthcheck" {

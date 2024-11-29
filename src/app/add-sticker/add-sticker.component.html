@@ -1,5 +1,6 @@
 <div class="add-sticker-container">
-    <h2>Add a New Sticker</h2>
+    <button class="nav-home-button" (click)="navigateHome()">Go back home</button>
+    <h2>Add a New Sticker</h2><br>
     <form (ngSubmit)="saveSticker()">
       <label for="title">Title</label>
       <input id="title" type="text" [(ngModel)]="title" name="title" required />

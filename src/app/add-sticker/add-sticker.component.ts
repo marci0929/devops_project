@@ -21,4 +21,8 @@ export class AddStickerComponent {
     localStorage.setItem('stickers', JSON.stringify(stickers));
     this.router.navigate(['/']);
   }
+
+  navigateHome(): void {
+    this.router.navigate(['/']);
+  }
 }

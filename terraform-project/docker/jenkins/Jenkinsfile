@@ -70,8 +70,8 @@ pipeline {
                             git clone ${env.GITHUB_REPO}
                             cd /app/devops_project
                             git checkout ${env.BRANCH}
-                            npm ci
-                            npm run build
+                            npm install -g @angular/cli
+                            npm install
                             ng serve
                         '
                     """

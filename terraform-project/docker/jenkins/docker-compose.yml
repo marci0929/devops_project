@@ -14,7 +14,7 @@ services:
   deploy-container:
     build:
       context: .
-      dockerfile: Dockerfile_stickers-app
+      dockerfile: ../Dockerfile_stickers-app
     container_name: node23-deploy-container
     ports:
       - "4200:4200"
