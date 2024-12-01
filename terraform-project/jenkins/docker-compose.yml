@@ -12,13 +12,9 @@ services:
       - ./jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
-      deploy-network:
-        ipv4_address: 172.32.0.2 # Assign a static IP to Jenkins
+      - deploy-network
 
 networks:
   deploy-network:
     name: deploy-network
     driver: bridge
-    ipam:
-      config:
-        - subnet: 172.32.0.0/16
