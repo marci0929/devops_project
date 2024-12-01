@@ -24,7 +24,7 @@ variable "container_count" {
 variable "memory_limit" {
   description = "Memória limit MB-ban"
   type        = number
-  default     = 1024  # 256 MB
+  default     = 1024
 }
 
 variable "restart_policy" {

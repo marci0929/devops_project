@@ -21,6 +21,7 @@ resource "docker_container" "stickers-app" {
   count = var.container_count
   name  = "${var.container_name}-${count.index + 1}"
   image = docker_image.stickers-app.image_id
+  logs = true
 
   # Memória limit
   memory = var.memory_limit
