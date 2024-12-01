@@ -22,17 +22,26 @@ pipeline {
             }
         }
 
+        stage('Test build'){
+            steps {
+                sh 'npm install -g @angular/cli'
+                sh 'npm install'
+                sh 'ng build'
+            }
+        }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
-                sh 'ls'
+                echo 'Refreshing the application...'
                 dir('terraform-project') {
-                    sh 'terraform init'
-                    sh 'terraform apply -auto-approve'
+                    sh 'terraform init -no-color'
+                    sh 'docker stop $(docker ps --filter name=stickers-app -q)'
+                    sh 'terraform apply -auto-approve -no-color'
                 }
             }
         }
     }
+
 
     post {
         success {

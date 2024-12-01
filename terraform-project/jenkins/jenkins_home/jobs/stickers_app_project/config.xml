@@ -36,17 +36,27 @@
                 git branch: env.BRANCH, url: env.GITHUB_REPO
             }
         }
+        
+        stage(&apos;Test build&apos;){
+            steps {
+                sh &apos;npm install -g @angular/cli&apos;
+                sh &apos;npm install&apos;
+                sh &apos;ng build&apos;
+            }
+        }
 
         stage(&apos;Deploy&apos;) {
             steps {
-                echo &apos;Deploying the application...&apos;
+                echo &apos;Refreshing the application...&apos;
                 dir(&apos;terraform-project&apos;) {
                     sh &apos;terraform init -no-color&apos;
+                    sh &apos;docker stop $(docker ps --filter name=stickers-app -q)&apos;
                     sh &apos;terraform apply -auto-approve -no-color&apos;
                 }
             }
         }
     }
+    
 
     post {
         success {
