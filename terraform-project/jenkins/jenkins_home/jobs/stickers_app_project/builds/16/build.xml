@@ -383,15 +383,24 @@
         </entry>
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.21-458.vcf496cb_839e4">
+      <queuingDurationMillis>19</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>13</buildableDurationMillis>
+      <waitingDurationMillis>4</waitingDurationMillis>
+      <executingDurationMillis>187128</executingDurationMillis>
+      <workUnitCount>1</workUnitCount>
+    </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
   <queueId>28</queueId>
   <timestamp>1733074967049</timestamp>
   <startTime>1733074967069</startTime>
-  <duration>0</duration>
+  <result>FAILURE</result>
+  <duration>188289</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
-    <result>SUCCESS</result>
+    <result>FAILURE</result>
     <script>pipeline {
     agent any
 
@@ -451,7 +460,7 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>1887460958</long>
+        <long>2278282027</long>
       </entry>
       <entry>
         <string>classLoad</string>
@@ -459,11 +468,11 @@
       </entry>
       <entry>
         <string>runQueue</string>
-        <long>4563881711</long>
+        <long>6232465856</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>5710480545</long>
+        <long>7146324528</long>
       </entry>
       <entry>
         <string>parse</string>
@@ -471,18 +480,21 @@
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>1611081247</long>
+        <long>2329411340</long>
       </entry>
     </timings>
-    <internalCalls class="sorted-set"/>
+    <internalCalls class="sorted-set">
+      <string>hudson.model.Result.fromString</string>
+      <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
+    </internalCalls>
     <sandbox>true</sandbox>
-    <iota>61</iota>
-    <head>1:61</head>
-    <start>2</start>
-    <done>false</done>
+    <iota>79</iota>
+    <head>1:79</head>
+    <done>true</done>
     <resumeBlocked>false</resumeBlocked>
+    <storageDir>workflow-completed</storageDir>
   </execution>
-  <completed>false</completed>
+  <completed>true</completed>
   <checkouts class="hudson.util.PersistedList">
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
       <scm class="hudson.plugins.git.GitSCM" plugin="git@5.6.0">

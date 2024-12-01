@@ -1,0 +1,26 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@936.v9fa_77211ca_e1">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@3996.va_f5c1799f978">
+    <parentIds>
+      <string>59</string>
+    </parentIds>
+    <id>60</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.durable_task.ShellStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3996.va_f5c1799f978">
+      <arguments>
+        <entry>
+          <string>script</string>
+          <string>test -z $(docker ps --filter name=stickers-app -q) || docker stop $(docker ps --filter name=stickers-app -q) &amp;&amp; docker rm $(docker ps -a --filter name=stickers-app -q)</string>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1336.vee415d95c521">
+      <startTime>1733077029244</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+  </actions>
+</Tag>

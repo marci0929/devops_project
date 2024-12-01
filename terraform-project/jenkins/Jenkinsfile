@@ -35,7 +35,7 @@ pipeline {
                 echo 'Refreshing the application...'
                 dir('terraform-project') {
                     sh 'terraform init -no-color'
-                    sh 'docker stop $(docker ps --filter name=stickers-app -q)'
+                    sh 'test -z $(docker ps --filter name=stickers-app -q) || docker stop $(docker ps --filter name=stickers-app -q)'
                     sh 'terraform apply -auto-approve -no-color'
                 }
             }
