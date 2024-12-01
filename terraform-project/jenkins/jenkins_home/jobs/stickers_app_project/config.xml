@@ -40,10 +40,9 @@
         stage(&apos;Deploy&apos;) {
             steps {
                 echo &apos;Deploying the application...&apos;
-                sh &apos;ls&apos;
                 dir(&apos;terraform-project&apos;) {
-                    sh &apos;terraform init&apos;
-                    sh &apos;terraform apply -auto-approve&apos;
+                    sh &apos;terraform init -no-color&apos;
+                    sh &apos;terraform apply -auto-approve -no-color&apos;
                 }
             }
         }
