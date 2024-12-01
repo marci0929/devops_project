@@ -8,10 +8,6 @@ terraform {
   }
 }
 
-provider "docker" {
-  host = "unix:///var/run/docker.sock"
-}
-
 module "stickers-app" {
   source = "./modules/stickers-app/docker"
 

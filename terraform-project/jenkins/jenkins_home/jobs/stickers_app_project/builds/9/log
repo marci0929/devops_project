@@ -257,3 +257,46 @@ Terraform will perform the following actions:
 [0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [2m10s elapsed][0m[0m
 [0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [2m20s elapsed][0m[0m
 [0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [2m30s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [2m40s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [2m50s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [3m1s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [3m11s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [3m21s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [3m31s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [3m41s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [3m51s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [4m1s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [4m11s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [4m21s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [4m31s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [4m41s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [4m51s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Still creating... [5m1s elapsed][0m[0m
+[0m[1mmodule.stickers-app.docker_image.stickers-app: Creation complete after 5m3s [id=sha256:f77fe7824de4580963720552aa341489c0dd1d87e4ec21d8b05aed643da9df1astickers-app:latest][0m
+[0m[1mmodule.stickers-app.docker_container.stickers-app[0]: Creating...[0m[0m
+[0m[1mmodule.stickers-app.docker_container.stickers-app[1]: Creating...[0m[0m
+[0m[1mmodule.stickers-app.docker_container.stickers-app[1]: Creation complete after 1s [id=bf3757fb521ddc3c77002ee79d010487b79ef063830cfdc7264eef68e759ab85][0m
+[0m[1mmodule.stickers-app.docker_container.stickers-app[0]: Creation complete after 1s [id=cdf99ffc57e1898e823046463f1581181c895ddc6464b4afa274d66ce6881174][0m
+[0m[1m[32m
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+[0m
+[8mha:////4NJvLxu5c2RC6qLdFWYuJocNs9jxYJJXW+gFe9KOvcGGAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrd/lPbN/zO9Xa+AAAA[0m[Pipeline] }
+[8mha:////4H79+oeeRovbV1qvKyf/6WCB3lK9c0TThnuuAMztvQoDAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISQKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyt//U9g3PLa7KvgAAAA==[0m[Pipeline] // dir
+[8mha:////4BBDgdl0Me/yWJAuQ+1mF5TyfwEPn0yPssDG0/Pi9DouAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCQYGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgE2/vbVvgAAAA==[0m[Pipeline] }
+[8mha:////4KEiLVdz6qRwGtZFsiShyYU936I7YndT+U1lBWbFxfTcAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSQBMhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJygPda59/QHwAzcovgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4IwJPcC3uK6yz/paRxlC/h9Pw1V0NSD02QYbqH9Y80+IAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDNtdu/wExJf7XvgAAAA==[0m[Pipeline] }
+[8mha:////4F6tmUAlMgVcd6zeKVArf944Gfm9RLyoS4CArzUHAECzAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRiqgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJygP+1x1/QE3Y8aCvgAAAA==[0m[Pipeline] // stage
+[8mha:////4FOi5Leh7pMtDo4tWu0DHPwjQej7vYlgzQDAhxu5wpz5AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUIMGCOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK52WfbbT/P6g3/Pd5GwgAAAA==[0m[Pipeline] stage
+[8mha:////4HtIiTXO83RL2nhzNEyDnGLE8eAKSKmX3Cxhzy+VluhAAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD6emXT7CAAAA[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4BTjoK6q4uAxVi/TM1G+MZ2XGhlbJYlEft9cnZi1GsouAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSABWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyv32U7vwBiwS7Xe+AAAA[0m[Pipeline] echo
+Application is running!
+[8mha:////4LVZymjAs/WniICpla9cnfUOcKlc1r5Dtr75p0Eg5CtLAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSoFSIitZKwwtMYowd686xHZyKF/E1/kAgEhVbrHa2mecL1jHAkYNGq6g3FFuD3o16Xpg59FfHGS1fsGWK7BQ2KjfcqdOCDScFS4oSVgI2ilrH0ZBOsBVW3mXlJOnqnML8HQSUphvgAYWYzUmG9IUpwO42dpHp5/krgMn7BGVdf2r/BqeGDU++AAAA[0m[Pipeline] }
+[8mha:////4GVFhnIt2jjVDN8LyvSfWwNgbcyEcXScLl6Zcz33ZVwRAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUGDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgGfxJ6+vgAAAA==[0m[Pipeline] // stage
+[8mha:////4DM/prJ9z8JTeLFhi4hhK5EEQwZh03JB0izGHiHn/wLlAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCqBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuDrm2+w8nFsMWvgAAAA==[0m[Pipeline] }
+[8mha:////4KBEMDj7I1Ua0HEMY/th1fXni7VCQlGmmv2KHvff5770AAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRRSQkRJXWSsMLTHwYJ9adsR2SihfxNf6ARSQqtljtbDOvN6xjgBMHI3qkwVLsrPBuNHmJicNwdTyJni+iY4rsULQ4tayxWbDlhLCkKGElYYPUOY6WTIKt7NVDVU6Rqc4p5O8oobT6Dk8oZDYnFdIX5gC726gj08/zVwCz9wnK+pBrX38ASPWcfr4AAAA=[0m[Pipeline] // withEnv
+[8mha:////4EHUOEfJrhtK+5fJoPYsRxapHa/wKpB0AEr1uKXn8OPsAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKpQEKIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsPzmrKqr0AAAA=[0m[Pipeline] }
+[8mha:////4GOGegM8dPJ3EZhbBQDGa6wy0/V0yIKVf8tOHRdrZessAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiLYaONY2WZoPEGEGAOZXUwWofJEXs07yMiMlb/67zXv9cYyRRw5OtVYaj2lyqsu9G56auDYXgMPquGLqpgSB6tKO5Rc29OMJYvFvCzHQmNlqQqcPDnBWjfmYYpgyBVniZM7aOS+vuOJTE9lMVG+MEZsbn2dmH6dvwGMXSfI91tBtvsAqytHuL0AAAA=[0m[Pipeline] // withEnv
+[8mha:////4KsOX1zTPUfZRHrJIjIXps0/WkKk9Usp7ZUwJV1iYyvZAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIREqJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PutINt9AI0yIPK9AAAA[0m[Pipeline] }
+[8mha:////4BiZAo4r+Ey9Xq9wRHUjzOpuexyML0Go7mK/8hpnMjxJAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRQKJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PutINt9AP7d5Cu9AAAA[0m[Pipeline] // node
+[8mha:////4LPEj6HlPS2su6589FCnGtVpDF+4zrxbRmBkGDIPZye7AAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRQKJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PudINt+ANjEg2G9AAAA[0m[Pipeline] End of Pipeline
+Finished: SUCCESS
