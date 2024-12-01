@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'NODEJS_23'
+        terraform 'TF_DEFAULT'
+    }
+
+    environment {
+        GITHUB_REPO = 'https://github.com/marci0929/devops_project.git'
+        BRANCH = 'master'
+        DEPLOY_CONTAINER = 'stickers-app'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                sh 'mkdir -p app'
+                sh 'cd app'
+                sh 'rm -rf *'
+                git branch: env.BRANCH, url: env.GITHUB_REPO
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                sh 'ls'
+                dir('terraform-project') {
+                    sh 'terraform init'
+                    sh 'terraform apply -auto-approve'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Application is running!'
+        }
+        failure {
+            echo 'Errors happened during deployment!'
+        }
+    }
+}

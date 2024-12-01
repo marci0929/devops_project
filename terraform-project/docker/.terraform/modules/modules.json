@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"nodejs_app","Source":"./modules/nodejs-app/docker","Dir":"modules/nodejs-app/docker"},{"Key":"stickers-app","Source":"./modules/stickers-app/docker","Dir":"modules/stickers-app/docker"}]}
