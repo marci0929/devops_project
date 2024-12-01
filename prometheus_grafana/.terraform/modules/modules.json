@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"grafana","Source":"./modules/grafana","Dir":"modules/grafana"},{"Key":"prometheus","Source":"./modules/prometheus","Dir":"modules/prometheus"},{"Key":"stickers_app","Source":"./modules/stickers-app/docker","Dir":"modules/stickers-app/docker"},{"Key":"zabbix","Source":"./modules/zabbix","Dir":"modules/zabbix"}]}
