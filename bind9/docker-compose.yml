@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   bind9:
     build:
@@ -10,26 +9,10 @@ services:
     volumes:
       - ./bind_config:/etc/bind
     networks:
-      app_network:
-        ipv4_address: 172.30.0.2
-    cap_add:
-      - NET_ADMIN
-
-  angular-app:
-    build:
-      context: .
-      dockerfile: Dockerfile_angular-dev-env
-    ports:
-      - "4200:4200"
-    networks:
-      app_network:
-        ipv4_address: 172.30.0.3
+      - app_network
     cap_add:
       - NET_ADMIN
 
 networks:
   app_network:
     driver: bridge
-    ipam:
-      config:
-        - subnet: 172.30.0.0/16

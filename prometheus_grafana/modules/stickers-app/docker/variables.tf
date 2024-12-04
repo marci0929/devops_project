@@ -25,13 +25,13 @@ variable "container_count" {
 variable "memory_limit" {
   description = "Memória limit MB-ban"
   type        = number
-  default     = 256  # 256 MB
+  default     = 512  # 1024 MB
 }
 
 variable "restart_policy" {
   description = "Újraindítási szabály"
   type        = string
-  default     = "unless-stopped"  # always, on-failure, unless-stopped
+  default     = "on-failure"  # always, on-failure, unless-stopped
 }
 
 variable "healthcheck" {
@@ -46,7 +46,7 @@ variable "healthcheck" {
   })
   default = {
     enabled      = true
-    test         = ["CMD", "curl", "-f", "http://localhost:4200/"]
+    test         = ["CMD", "curl", "-f", "http://172.48.0.22:4200/"]
     interval     = "30s"
     timeout      = "10s"
     retries      = 3
