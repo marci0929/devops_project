@@ -1,3 +1,7 @@
+# First notes
+- Used components: Jenkins, Terraform, Prometheus, Grafana, (Bind9, Nginx)
+- CI/CD and Monitoring was made as 2 separate projects, because I couldn't sync the subnets and docker components with Terraform used in Jenkins in Docker, and other (the monitoring frameworks) docker composed architecture. Both work separately, but there is a project which only support CI/CD, and another separate project which monitors a different instance of the website which isn't managed by Jenkins.
+
 # Quick start CI/CD
 
 1) install docker on your system
@@ -12,6 +16,8 @@ This will build the project and deploy it on `localhost:4200` and `localhost:420
 
 # Quick start monitoring
 
+(kill the CI/CD project before trying these steps)
+
 1) Install terraform (can be the docker version)
 2) Navigate to `devops-angular-project/prometheus_grafana`
 3) Run `terraform init`
@@ -20,4 +26,9 @@ This will build the project and deploy it on `localhost:4200` and `localhost:420
 6) Prometheus can be accessed on `http://172.48.0.6:9090`
 7) Application is accessible on `http://172.48.0.20:4200`, `http://172.48.0.21:4200`, `http://172.48.0.22:4200`, `http://172.48.0.23:4200`
 
-(Bind9 config is currently under development, if this message is still there, then I couldn't make it work)
+# Usage
+
+- CI/CD on Jenkins should work as intended. The project can be rebuilt and deployed with a single click
+- The website resembles a simple sticker app, which can be tested after deployment
+- Prometheus and Grafana couldn't start when I gave them bindings to local volumes. So unfortunately the dashboard can't be seen on a clean new build, it needs to be reassembled manually (but the configs should be correct for them to be started). Though I put screenshots in the folder which shows thet the configuration is working as intended, Prometheus can poll the target hosts, and Grafana can display the metrics.
+- I tried to bind the website to a hostname with both Bind9 and Ngnix. On Bind9 probably I messed up something in the config file. Ngnix starts, and resolves the hostname in the browser, but on access the website gives me errors related to mime types and unresolvable files. I debugged both several hours, and tried everything I found on the net, but unfortunately couldn't make it work.

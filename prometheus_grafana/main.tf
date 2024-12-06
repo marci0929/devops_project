@@ -11,8 +11,6 @@ terraform {
 provider "docker" {
   host = "unix:///var/run/docker.sock"
 }
-
-# Közös hálózat létrehozása
 resource "docker_network" "monitoring_network" {
   name = "${var.project_name}-network"
   driver = "bridge"
@@ -23,7 +21,6 @@ resource "docker_network" "monitoring_network" {
   internal = false
 }
 
-# Sticker app modul
 module "stickers_app" {
   source = "./modules/stickers-app/docker"
 
@@ -34,7 +31,6 @@ module "stickers_app" {
   depends_on = [docker_network.monitoring_network]
 }
 
-# Prometheus modul
 module "prometheus" {
   source = "./modules/prometheus"
 
@@ -42,7 +38,6 @@ module "prometheus" {
   stickers_app_name = module.stickers_app.container_name
 }
 
-# Grafana modul
 module "grafana" {
   source = "./modules/grafana"
 
@@ -50,14 +45,10 @@ module "grafana" {
   prometheus_url = "http://prometheus:9090"
 }
 
-# Zabbix modul
-module "zabbix" {
-  source = "./modules/zabbix"
-
-  network = docker_network.monitoring_network.name
-  mysql_root_password = var.mysql_root_password
-  zabbix_mysql_password = var.zabbix_mysql_password
+module "nginx" {
+  source = "./modules/nginx"
 }
+
 
 output "network_info" {
   value = {
